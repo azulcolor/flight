@@ -1,14 +1,19 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function HamburguerMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
   const switchMenuState = () => {
     setIsMenuOpen(!isMenuOpen)
   }
+
+  useEffect(() => {
+    let handler = () => setIsMenuOpen(false)
+
+    document.addEventListener('mousedown', handler)
+  })
 
   return (
     <div className='hamburguer__menu' onClick={switchMenuState}>

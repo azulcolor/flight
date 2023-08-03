@@ -15,8 +15,9 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint", "prettier"], 
   "rules": {
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
     "quotes": ["error", "single", { "avoidEscape": true }],
     "semi": [2, "never"],
     "prettier/prettier": [
@@ -31,6 +32,13 @@
         "endOfLine": "auto"
       }
     ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
+      }
+    }
   },
   "ignorePatterns": ["next.config.js", "tailwind.config.js", "postcss.config.js"]
 }

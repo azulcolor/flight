@@ -10,7 +10,6 @@ export const theme = {
       roboto: ['Roboto', 'sans-serif'],
     },
     fontSize: {
-      'title': '500px'
     },
     colors: {
       'background': '#F9F9F9',
