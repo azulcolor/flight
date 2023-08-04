@@ -27,7 +27,7 @@ p {
 /* Header */
 
 .header__nav {
-  @apply lg:mx-20 mx-5 flex items-center py-4 mt-4 lg:mt-0
+  @apply lg:mx-20 mx-5 flex items-center py-2 lg:py-4 mt-1 lg:mt-0
 }
 
 .nav__link {
