@@ -1,8 +1,13 @@
 import { Dispatch, SetStateAction } from 'react'
 
-export default interface Input {
+export default interface Iinput {
   value: string
   setValue: Dispatch<SetStateAction<string>>
   type: string
   placeholder: string
+}
+
+export interface Ibutton {
+  children: React.ReactNode
+  buttonFunction: () => void
 }

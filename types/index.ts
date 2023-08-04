@@ -1,3 +1,4 @@
-import input from './input'
+import Iinput from './input'
+import { Ibutton } from './input'
 
-export type { input }
+export type { Iinput, Ibutton }

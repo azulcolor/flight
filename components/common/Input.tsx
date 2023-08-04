@@ -1,6 +1,6 @@
-import { input } from '@/types'
+import { Iinput } from '@/types'
 
-export default function Input({ value, setValue, type, placeholder }: input) {
+export default function Input({ value, setValue, type, placeholder }: Iinput) {
   return (
     <input
       type={type}
@@ -8,7 +8,7 @@ export default function Input({ value, setValue, type, placeholder }: input) {
       required={true}
       autoFocus={true}
       value={value}
-      className='border rounded-lg border-text text-text w-72 h-10 pl-4'
+      className='input'
       onChange={(e) => setValue(e.target.value)}
     />
   )

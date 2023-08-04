@@ -71,4 +71,23 @@ p {
 }
 
 
+/* Common */
+
+.column__center {
+  @apply flex flex-col items-center
+}
+
+.title {
+  @apply text-2xl text-title text-center lg:text-3xl duration-300
+}
+
+.button {
+  @apply bg-primary-100 hover:bg-primary-50 duration-300 text-white text-sm rounded-lg w-72 h-10 mt-4 lg:w-[523px] lg:h-12 lg:text-xl
+}
+
+.input {
+  @apply border rounded-lg border-text text-text w-72 h-10 pl-4 lg:w-[523px] lg:h-12 lg:text-lg duration-300 focus:outline-none focus:border-start-card
+}
+
+
 
