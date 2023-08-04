@@ -17,7 +17,7 @@ export default function Forgot() {
           <p className='text-text text-sm text-center px-1 mt-4 mb-9 lg:text-base w-72 lg:w-[523px] lg:px-5'>
             Proporciona el correo con el que te registraste y te enviaremos un correo para cambiar la contraseña
           </p>
-          <Input type='email' placeholder='Correo electrónico' value={email} setValue={setEmail} />
+          <Input type='email' placeholder='Correo electrónico' value={email} setValue={setEmail} focus={true} />
           <Button buttonFunction={() => null}>Continuar</Button>
           <ForgotLinks />
         </div>

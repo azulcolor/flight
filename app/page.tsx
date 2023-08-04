@@ -15,7 +15,7 @@ export default function Home() {
         <Image src={'/images/logo.png'} alt='logo' width={300} height={228} className=' w-44 mt-16 lg:w-52 ' />
         <div className='column__center gap-2 lg:gap-3'>
           <h1 className='title mb-9'>Iniciar sesión</h1>
-          <Input type='email' placeholder='Correo electrónico' value={email} setValue={setEmail} />
+          <Input type='email' placeholder='Correo electrónico' value={email} setValue={setEmail} focus={true} />
           <Input type='password' placeholder='Contraseña' value={password} setValue={setPassword} />
           <Button buttonFunction={() => null}>Continuar</Button>
           <LoginLinks />

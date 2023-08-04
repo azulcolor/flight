@@ -5,6 +5,7 @@ export default interface Iinput {
   setValue: Dispatch<SetStateAction<string>>
   type: string
   placeholder: string
+  focus?: boolean
 }
 
 export interface Ibutton {
