@@ -21,7 +21,7 @@ h4, li {
 }
 
 p {
-  @apply text-base text-text;
+  @apply text-sm text-text;
 }
 
 /* Header */

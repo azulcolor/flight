@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai'
 import Image from 'next/image'
 
-import { languages } from '@/utils'
+import { languages } from '@/utils/variables'
 
 export default function Selectlanguages() {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,7 +16,7 @@ export default function Selectlanguages() {
   }
 
   return (
-    <div className='relative flex flex-col items-center lg:w-44 w-32 h-4 rounded-lg'>
+    <div className='column__center relative lg:w-44 w-32 h-4 rounded-lg'>
       <button onClick={() => setIsOpen(!isOpen)} className='language__dropdown'>
         {language}
         {!isOpen ? <AiOutlineCaretDown className='h-8 bg-inherit' /> : <AiOutlineCaretUp className='h-8 bg-inherit' />}

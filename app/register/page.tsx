@@ -4,11 +4,14 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { Button, Input } from '@/components/common'
 import { RegisterLinks } from '@/components/auth'
+import { register } from '@/utils/auth'
 
 export default function Register() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [membership, setMembership] = useState('')
+
+  const userData = { email, password, membership }
 
   return (
     <main className='overflow-hidden'>
@@ -21,8 +24,7 @@ export default function Register() {
           <Input type='email' placeholder='Correo electrónico' value={email} setValue={setEmail} focus={true} />
           <Input type='password' placeholder='Contraseña' value={password} setValue={setPassword} />
           <Input type='text' placeholder='Número de membresía' value={membership} setValue={setMembership} />
-
-          <Button buttonFunction={() => null}>Continuar</Button>
+          <Button buttonFunction={() => register(userData)}>Continuar</Button>
 
           <RegisterLinks />
         </div>

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { HamburguerMenu } from '.'
+import { logout } from '@/utils/auth'
 
 export default function Nav() {
   return (
@@ -18,7 +19,9 @@ export default function Nav() {
           <Link href={'/'}>Cambio de contraseña</Link>
         </li>
       </ul>
-      <button className='logout'>Cerrar sesión</button>
+      <button className='logout' onClick={logout}>
+        Cerrar sesión
+      </button>
       <HamburguerMenu />
     </>
   )

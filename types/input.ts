@@ -10,5 +10,5 @@ export default interface Iinput {
 
 export interface Ibutton {
   children: React.ReactNode
-  buttonFunction: () => void
+  buttonFunction: any
 }

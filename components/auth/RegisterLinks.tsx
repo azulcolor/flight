@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function RegisterLinks() {
   return (
     <>
-      <p className='text-text text-sm text-center px-1 mt-4 lg:text-base w-72 lg:w-[523px] lg:px-5'>
+      <p className='text-center px-1 mt-4 lg:text-base w-72 lg:w-[523px] lg:px-5'>
         El correo y el número de membresía deberán ser los proporcionados en el contrato
       </p>
 

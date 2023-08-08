@@ -17,3 +17,5 @@ export const languages: Language[] = [
     flag: usaFlag,
   },
 ]
+
+export default languages
