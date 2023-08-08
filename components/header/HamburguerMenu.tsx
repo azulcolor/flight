@@ -1,22 +1,35 @@
 'use client'
 
+import { logout } from '@/utils/auth'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 export default function HamburguerMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  let menuRef = useRef<HTMLDivElement>(null)
+
   const switchMenuState = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
   useEffect(() => {
-    let handler = () => setIsMenuOpen(false)
+    const node = menuRef.current
 
+    let handler = (e: { target: any }) => {
+      if (!node?.contains(e.target)) {
+        setIsMenuOpen(false)
+      }
+    }
     document.addEventListener('mousedown', handler)
+
+    return () => {
+      document.removeEventListener('mousedown', handler)
+    }
   })
 
   return (
-    <div className='hamburguer__menu' onClick={switchMenuState}>
+    <div className='hamburguer__menu' onClick={switchMenuState} ref={menuRef}>
       <div className='w-6 hamburguer__line' />
       <div className='w-4 hamburguer__line' />
       <div className='w-6 hamburguer__line' />
@@ -25,7 +38,9 @@ export default function HamburguerMenu() {
         <Link href='#'>Datos Bancarios</Link>
         <Link href='#'>Contacto</Link>
         <Link href='#'>Cambiar contraseña</Link>
-        <Link href='#'>Cerrar sesión</Link>
+        <button className='text-left' onClick={logout}>
+          Cerrar sesión
+        </button>
       </div>
     </div>
   )

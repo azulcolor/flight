@@ -1,7 +1,19 @@
+'use client'
+
 import Image from 'next/image'
+import React, { useState, useEffect } from 'react'
+import Cookies from 'js-cookie'
+
 import { Nav, Selectlanguage } from '.'
 
-export default function Header({ isLogged }: { isLogged: boolean }) {
+export default function Header() {
+  const [isLogged, setIsLogged] = useState(false)
+
+  useEffect(() => {
+    const token = Cookies.get('token')
+    setIsLogged(!!token)
+  }, [])
+
   if (isLogged) {
     return (
       <header className='w-full z-10'>

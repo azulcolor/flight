@@ -12,7 +12,7 @@ export default function ContactInfo() {
 
         {item.info.map((info, i) => {
           return (
-            <p className='mt-2 self-start text-base' key={i}>
+            <p className='mt-2 self-start text-base lg:self-center lg:w-96 lg:text-center' key={i}>
               {info}
             </p>
           )
@@ -22,7 +22,7 @@ export default function ContactInfo() {
   })
 
   return (
-    <section className='column__center pt-20 w-full'>
+    <section className='column__center pt-20 w-full lg:flex-row lg:h-screen'>
       {contactElements}
       <Link
         href='/'

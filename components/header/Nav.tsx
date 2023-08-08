@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { HamburguerMenu } from '.'
 import { logout } from '@/utils/auth'

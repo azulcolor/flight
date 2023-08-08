@@ -9,7 +9,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  @apply bg-background;
+}
+
+body {
+  @apply min-h-screen bg-background;
 }
 
 h2 {
@@ -46,7 +49,7 @@ p {
   @apply flex-col w-40 h-8 bg-background absolute z-10 right-5
 }
 
-.menu__mobile a {
+.menu__mobile a, button {
   @apply py-2.5 pl-2.5
 }
 
