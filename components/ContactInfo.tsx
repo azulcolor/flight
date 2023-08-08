@@ -26,7 +26,7 @@ export default function ContactInfo() {
       {contactElements}
       <Link
         href='/'
-        className='text-secondary text-base text-center hover:text-secondary lg:text-lg fixed bottom-0 left-0 w-full pb-4 pt-1'
+        className='text-secondary text-base text-center hover:text-secondary lg:text-lg fixed bottom-0 left-0 w-full pb-4 pt-1 bg-background'
       >
         Iniciar sesión
       </Link>

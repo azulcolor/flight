@@ -50,7 +50,7 @@ p {
 }
 
 .menu__mobile a, button {
-  @apply py-2.5 pl-2.5
+  @apply py-2.5 pl-2.5 bg-background
 }
 
 .hamburguer__menu {
