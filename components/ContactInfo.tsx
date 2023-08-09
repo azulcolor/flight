@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { contact } from '@/utils/variables'
+import { contact } from '@/utils/constants'
 
 export default function ContactInfo() {
   const contactElements = contact.map((item, index) => {

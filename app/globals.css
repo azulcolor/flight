@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
 
+@import '../styles/ticket.css';
+@import '../styles/header.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,55 +30,6 @@ p {
   @apply text-sm text-text;
 }
 
-/* Header */
-
-.header__nav {
-  @apply lg:mx-20 mx-5 flex items-center py-2 lg:py-4 mt-1 lg:mt-0
-}
-
-.nav__link {
-  @apply hidden lg:flex lg:gap-x-10 
-}
-
-.nav__link li {
-  @apply transition duration-300 hover:underline hover:text-secondary
-}
-
-.logout {
-  @apply hidden lg:block text-secondary text-xl
-}
-
-.menu__mobile {
-  @apply flex-col w-40 h-8 bg-background absolute z-10 right-5
-}
-
-.menu__mobile a, button {
-  @apply py-2.5 pl-2.5 bg-background
-}
-
-.hamburguer__menu {
-  @apply flex flex-col items-end gap-2 lg:hidden
-}
-
-.hamburguer__line {
-  @apply h-0.5 bg-title
-}
-
-.language__dropdown {
-  @apply p-3 flex items-center justify-between text-sm lg:text-base rounded-lg tracking-wider border-4 border-transparent active:border-white duration-300 active:text-white w-full text-text
-}
-
-.language__dropdown span {
-  @apply absolute top-16 right-[.3px] flex flex-col items-start rounded-lg w-full
-}
-
-.language__dropdown span div {
-  @apply flex justify-between hover:bg-slate-300 cursor-pointer rounded-r-lg border-l-transparent hover:border-l-white border-l-4 p-3 w-full
-}
-
-
-/* Common */
-
 .column__center {
   @apply flex flex-col items-center
 }
@@ -89,8 +43,10 @@ p {
 }
 
 .input {
-  @apply border rounded-lg border-text text-text w-72 h-10 pl-4 lg:w-[523px] lg:h-12 lg:text-lg duration-300 focus:outline-none focus:border-start-card
+  @apply border rounded-lg border-text text-text w-72 h-10 pl-4 lg:w-[523px] lg:h-12 lg:text-lg duration-300 focus:outline-none focus:border-start-card-100
 }
+
+
 
 
 

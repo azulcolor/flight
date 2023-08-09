@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai'
 import Image from 'next/image'
 
-import { languages } from '@/utils/variables'
+import { languages } from '@/utils/constants'
 
 export default function Selectlanguages() {
   const [isOpen, setIsOpen] = useState(false)

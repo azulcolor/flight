@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ticket__page {
+    @apply lg:grid lg:grid-cols-6 lg:w-screen px-20 pt-16
+  }
+
+  .tickets {
+    @apply flex flex-col items-center gap-4 lg:flex-row lg:flex-wrap lg:col-span-4 lg:gap-9
+  }
+  
+  .ticket__container {
+    @apply w-72 h-48 rounded-3xl px-2 pt-6 pb-7 flex flex-col justify-between lg:w-[391px] lg:h-60 lg:cursor-pointer
+  }
+  
+  .head__container {
+    @apply grid grid-cols-5 items-center px-3
+  }
+  
+  .value {
+    @apply text-background text-xl col-span-2 lg:text-2xl
+  }
+  
+  .status {
+    @apply text-background text-sm col-span-3 text-right lg:text-base
+  }
+  
+  .line {
+    @apply w-6 h-[1.3px] bg-title lg:w-8 lg:h-[1.5px]
+  }
+  
+  .start {
+    @apply bg-start-card-100 hover:bg-start-card-50 duration-300
+  }
+  
+  .approved {
+    @apply bg-approved-card-100 hover:bg-approved-card-50 duration-300
+  }
+  
+  .active {
+    @apply bg-active-card-100 hover:bg-active-card-50 duration-300
+  }
+  
+  .available {
+    @apply bg-available-card-100 hover:bg-available-card-50 duration-300
+  }
+  
+  .refunded {
+    @apply bg-refunded-card-100 hover:bg-refunded-card-50 duration-300
+  }
+  
+  .expired {
+    @apply bg-expired-card-100 hover:bg-expired-card-50 duration-300
+  }
+  
+  .refused {
+    @apply bg-refused-card-100 hover:bg-refused-card-50 duration-300
+  }
