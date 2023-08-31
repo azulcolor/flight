@@ -15,7 +15,7 @@
   }
   
   .logout {
-    @apply hidden lg:block text-secondary text-xl
+    @apply hidden lg:block text-secondary text-xl hover:underline
   }
   
   .menu__mobile {

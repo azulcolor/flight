@@ -38,14 +38,34 @@ p {
   @apply text-2xl text-title text-center lg:text-3xl duration-300
 }
 
+.button__container {
+  @apply bg-primary-100 hover:bg-primary-50 duration-300 text-white rounded-lg
+}
+
 .button {
-  @apply bg-primary-100 hover:bg-primary-50 duration-300 text-white text-sm rounded-lg w-72 h-10 mt-4 lg:w-[523px] lg:h-12 lg:text-xl
+  @apply button__container text-sm  h-10 mt-4 w-72 lg:w-[523px] lg:h-12 lg:text-xl
+}
+
+.link {
+  @apply button__container flex items-center justify-center text-sm h-10 mt-16 w-72 lg:w-full lg:h-10 lg:text-lg
 }
 
 .input {
-  @apply border rounded-lg border-text text-text w-72 h-10 pl-4 lg:w-[523px] lg:h-12 lg:text-lg duration-300 focus:outline-none focus:border-start-card-100
+  @apply border rounded-lg border-text text-text w-72 h-10 pl-4 lg:w-[523px] lg:h-12 lg:text-lg duration-300 focus:outline-none focus:border-startProcess-card-100
 }
 
+@layer utilities {
+  @variants responsive {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+  }
+}
 
 
 

@@ -9,7 +9,7 @@ export default function Nav() {
     <>
       <ul className='nav__link'>
         <li>
-          <Link href={'/'}>Cupones</Link>
+          <Link href={'/tickets'}>Cupones</Link>
         </li>
         <li>
           <Link href={'/'}>Datos Bancarios</Link>

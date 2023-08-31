@@ -1,10 +1,10 @@
-import { ITicketProps } from '@/types/logged'
+import { ITicket } from '@/types/logged'
 
-export const tickets: ITicketProps[] = [
+export const tickets: ITicket[] = [
   {
     value: '320',
     status: 'Inicia trámite',
-    color: 'start',
+    color: 'startProcess',
     startDate: '28 de febrero 2012',
     endDate: '30 de octubre 2027',
   },

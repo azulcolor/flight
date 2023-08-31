@@ -1,3 +1,5 @@
-import { ITicketProps } from './ticket'
+import ITicketProps from './ticket'
+import { ITicket } from './ticket'
+import { ITicketInfo, IInfoStructure } from './ticketInfo'
 
-export type { ITicketProps }
+export type { ITicketProps, ITicketInfo, IInfoStructure, ITicket }

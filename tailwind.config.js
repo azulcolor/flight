@@ -33,7 +33,7 @@ export const theme = {
         '50' : '#E16D19',
         '100' : '#F97A1D',
       },
-      'start-card'   : {
+      'startProcess-card'   : {
         '50' : '#C8A21B',
         '100': '#D8AE17',
       },
