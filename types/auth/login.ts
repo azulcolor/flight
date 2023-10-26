@@ -1,13 +1,16 @@
 import { AxiosResponse } from 'axios'
+import { SetError } from '..'
 
 interface ILoginRequest {
-  email: string
+  username: string
   password: string
 }
 interface ILoginResponse {
-  succesful: boolean
-  token: string
+  ok: boolean
+  token?: string
+  message?: string
+  certificados?: string[]
 }
 
-export type IloginFunction = (userData: ILoginRequest) => Promise<ILoginResponse>
+export type IloginFunction = (userData: ILoginRequest, setError: SetError) => Promise<void>
 export type ILoginApiResponse = AxiosResponse<ILoginResponse>

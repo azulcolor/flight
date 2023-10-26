@@ -7,7 +7,7 @@ export default function ForgotLinks() {
         <Link href='/register' className='text-text text-sm text-center hover:text-secondary mt-4 lg:text-base lg:mt-0 lg:mr-3'>
           ¿Ya recuerdas tu contraseña?
         </Link>
-        <Link href='/register' className='text-primary-100 text-sm text-center hover:text-secondary mt-2 lg:text-base lg:mt-0'>
+        <Link href='/' className='text-primary-100 text-sm text-center hover:text-secondary mt-2 lg:text-base lg:mt-0'>
           Iniciar sesión
         </Link>
       </div>

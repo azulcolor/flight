@@ -1,8 +1,10 @@
-import { IforgotPasswordApiResponse, IforgotPasswordFunction, IResetPasswordApiResponse, IResetPasswordFunction } from '@/types/auth'
+import { IforgotPasswordApiResponse, IforgotPasswordFunction, IResetPasswordFunction } from '@/types/auth'
 import { flightApi } from '@/api'
 
 export const forgotPassword: IforgotPasswordFunction = async (userData) => {
   try {
+    window.location.href = '/forgot/reset'
+
     const response: IforgotPasswordApiResponse = await flightApi.post('forgot-password', {
       userData,
     })
@@ -18,16 +20,16 @@ export const forgotPassword: IforgotPasswordFunction = async (userData) => {
   }
 }
 
-export const resetPassword: IResetPasswordFunction = async (userData) => {
+export const resetPassword: IResetPasswordFunction = async (userData, token, setError) => {
   try {
-    const response: IResetPasswordApiResponse = await flightApi.post('reset-password', {
-      userData,
-    })
+    const url = `resetPassword?token=${token}`
+    await flightApi.patch(url, userData)
 
-    const { succesful } = response.data
+    window.location.href = '/'
+  } catch (error: any) {
+    const { ok, message } = error.response.data
 
-    return { succesful }
-  } catch (error) {
+    setError({ ok, message })
     throw new Error('Error while resetting password')
   }
 }

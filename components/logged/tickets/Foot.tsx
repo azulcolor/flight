@@ -1,6 +1,8 @@
 import Image from 'next/image'
 
-export default function Foot({ startDate, endDate }: { startDate: string; endDate: string }) {
+import { ITicketFoot } from '@/types/logged'
+
+export default function Foot({ startDate, endDate }: ITicketFoot) {
   return (
     <div className='flex justify-between px-3'>
       <div>

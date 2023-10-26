@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .header__nav {
-    @apply lg:mx-20 mx-5 flex items-center py-2 lg:py-4 mt-1 lg:mt-0
+    @apply lg:mx-20 mx-5 flex items-center py-2 lg:py-4 mt-7 lg:mt-0
   }
   
   .nav__link {
@@ -22,7 +22,7 @@
     @apply flex-col w-40 h-8 bg-background absolute z-10 right-5
   }
   
-  .menu__mobile a, button {
+  .menu__mobile :is(a, button) {
     @apply py-2.5 pl-2.5 bg-background
   }
   

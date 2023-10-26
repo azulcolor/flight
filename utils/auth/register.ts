@@ -1,20 +1,15 @@
-import { IRegisterFunction, IRegisterApiResponse } from '@/types/auth'
+import { IRegisterFunction } from '@/types/auth'
 import { flightApi } from '@/api'
 
-const register: IRegisterFunction = async (userData) => {
+const register: IRegisterFunction = async (userData, setError) => {
   try {
-    const response: IRegisterApiResponse = await flightApi.post('register', {
-      userData,
-    })
+    await flightApi.post('register', userData)
 
-    const { succesful, message } = response.data
+    window.location.href = '/'
+  } catch (error: any) {
+    const { ok, message } = error.response.data
 
-    return {
-      succesful,
-      message,
-    }
-  } catch (error) {
-    throw new Error('Error while registering')
+    setError({ ok, message })
   }
 }
 

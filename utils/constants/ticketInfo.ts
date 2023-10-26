@@ -1,6 +1,6 @@
 import { ITicketInfo } from '@/types/logged'
 
-export const ticketInfo: ITicketInfo = {
+const ticketInfo: ITicketInfo = {
   default: {
     title: '¡Bienvenido a Flight',
     message:
@@ -17,40 +17,58 @@ export const ticketInfo: ITicketInfo = {
   },
   active: {
     title: '¡Todo luce bien!',
-    message: 'Ponte en contacto con nosotros para cambiar el cupon. No olvides que tu contrato es: TEST-11 y tu certificado es: 787669.  ',
+    message: 'Ponte en contacto con nosotros para cambiar el cupon. No olvides que tu certificado es: ',
     image: '/images/good.png',
     status: 'active',
   },
   approved: {
     title: '¡Tu cupón fue aprovado!',
-    message: '¡Felicidades! Nos vemos el próximo año para que puedas canjear otro cupón.',
+    message: '¡Felicidades! Nos vemos el próximo año para que puedas canjear otro cupón',
     image: '/images/good.png',
     status: 'approved',
   },
   refunded: {
     title: '¡Tu cupón fue reembolsado!',
-    message: '¡Felicidades! Tu cupón fue reembolsado con éxito.',
+    message: '¡Felicidades! Tu cupón fue reembolsado con éxito',
     image: '/images/good.png',
     status: 'refunded',
   },
   expired: {
     title: '¡El cupón ha expirado!',
-    message: 'Pero no te preocupes, puedes probar con los demás cupones.',
+    message: 'Pero no te preocupes, puedes probar con los demás cupones',
     image: '/images/bad.png',
     status: 'expired',
   },
   refused: {
     title: 'Requisitos no cumplidos',
-    message: '¿Tienes dudas? No dudes en contactarnos.',
+    message: '¿Tienes dudas? No dudes en contactarnos',
     image: '/images/bad.png',
     status: 'refused',
   },
   available: {
     title: '¡Demasiado pronto!',
-    message: 'Aún no es la fecha para utilizar el cupón. Podrías dar un vistazo a otros cupones.',
+    message: 'Aún no es la fecha para utilizar el cupón. Podrías dar un vistazo a otros cupones',
     image: '/images/bad.png',
     status: 'available',
   },
 }
+
+export const ticketStatus = [
+  'green',
+  'yellow',
+  'red',
+  'blue',
+  'purple',
+  'orange',
+  'active',
+  'dfg1',
+  'dfg2',
+  'expired',
+  'refused',
+  'fdgdfg',
+  'available',
+  'refunded',
+  'ertert',
+]
 
 export default ticketInfo

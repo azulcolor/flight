@@ -1,12 +1,12 @@
 import { ITicketProps } from '@/types/logged'
 import { Foot, Head, Lines } from '.'
 
-export default function Ticket({ value, status, color, startDate, endDate }: ITicketProps) {
+export default function Ticket({ value, color, fecha_inicio, fecha_fin, nombreStatus }: ITicketProps) {
   return (
     <div className={`${color} ticket__container`}>
-      <Head value={value} status={status} />
+      <Head value={value} status={nombreStatus} />
       <Lines />
-      <Foot startDate={startDate} endDate={endDate} />
+      <Foot startDate={fecha_inicio} endDate={fecha_fin} />
     </div>
   )
 }

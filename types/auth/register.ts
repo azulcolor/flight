@@ -1,14 +1,18 @@
 import { AxiosResponse } from 'axios'
+import { SetError } from '..'
 
 interface IRegisterRequest {
-  email: string
+  username: string
   password: string
   membership: string
+  fullname: string
+  language: string
+  email: string
 }
 interface IRegisterResponse {
-  succesful: boolean
+  ok: boolean
   message: string
 }
 
-export type IRegisterFunction = (userData: IRegisterRequest) => Promise<IRegisterResponse>
+export type IRegisterFunction = (userData: IRegisterRequest, setError: SetError) => Promise<void>
 export type IRegisterApiResponse = AxiosResponse<IRegisterResponse>

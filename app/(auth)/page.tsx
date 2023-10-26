@@ -5,12 +5,14 @@ import { useState } from 'react'
 import { Button, Input } from '@/components/common'
 import { LoginLinks } from '@/components/auth'
 import { login } from '@/utils/auth'
+import { IError } from '@/types'
 
 export default function Home() {
-  const [email, setEmail] = useState('')
+  const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [error, setError] = useState<IError>({ ok: true, message: '' })
 
-  const userData = { email, password }
+  const userData = { username, password }
 
   return (
     <main className='overflow-hidden'>
@@ -19,9 +21,11 @@ export default function Home() {
         <div className='column__center gap-2 lg:gap-3'>
           <h1 className='title mb-9'>Iniciar sesión</h1>
 
-          <Input type='email' placeholder='Correo electrónico' value={email} setValue={setEmail} focus={true} />
-          <Input type='password' placeholder='Contraseña' value={password} setValue={setPassword} />
-          <Button buttonFunction={() => login(userData)}>Continuar</Button>
+          <Input type='text' placeholder='Usuario' value={username} setValue={setUsername} focus={true} setError={setError} />
+          <Input type='password' placeholder='Contraseña' value={password} setValue={setPassword} setError={setError} />
+
+          {!error.ok && <p className='text-red-500 self-start'>{error.message}</p>}
+          <Button buttonFunction={() => login(userData, setError)}>Continuar</Button>
 
           <LoginLinks />
         </div>

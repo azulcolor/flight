@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { contact } from '@/utils/constants'
 
-export default function ContactInfo() {
+export default function ContactInfo({ isLogged }: { isLogged: boolean }) {
   const contactElements = contact.map((item, index) => {
     return (
       <div className='column__center mb-20 w-9/12' key={index}>
@@ -24,12 +24,14 @@ export default function ContactInfo() {
   return (
     <section className='column__center pt-20 w-full lg:flex-row lg:h-screen'>
       {contactElements}
-      <Link
-        href='/'
-        className='text-secondary text-base text-center hover:text-secondary lg:text-lg fixed bottom-0 left-0 w-full pb-4 pt-1 bg-background'
-      >
-        Iniciar sesión
-      </Link>
+      {!isLogged && (
+        <Link
+          href='/'
+          className='text-secondary text-base text-center hover:text-secondary lg:text-lg fixed bottom-0 left-0 w-full pb-4 pt-1 bg-background'
+        >
+          Iniciar sesión
+        </Link>
+      )}
     </section>
   )
 }

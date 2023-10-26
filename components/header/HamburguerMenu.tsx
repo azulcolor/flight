@@ -1,11 +1,13 @@
 'use client'
 
 import { logout } from '@/utils/auth'
+import { routes } from '@/utils/constants'
 import Link from 'next/link'
 import { useEffect, useState, useRef } from 'react'
 
 export default function HamburguerMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { tickets, bankData, about, changePassword } = routes
 
   let menuRef = useRef<HTMLDivElement>(null)
 
@@ -34,10 +36,10 @@ export default function HamburguerMenu() {
       <div className='w-4 hamburguer__line' />
       <div className='w-6 hamburguer__line' />
       <div className={`${isMenuOpen ? 'flex' : 'hidden'} menu__mobile`}>
-        <Link href='#'>Cupones</Link>
-        <Link href='#'>Datos Bancarios</Link>
-        <Link href='#'>Contacto</Link>
-        <Link href='#'>Cambiar contraseña</Link>
+        <Link href={tickets}>Cupones</Link>
+        <Link href={bankData}>Datos Bancarios</Link>
+        <Link href={about}>Contacto</Link>
+        <Link href={changePassword}>Cambiar contraseña</Link>
         <button className='text-left' onClick={logout}>
           Cerrar sesión
         </button>

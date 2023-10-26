@@ -1,4 +1,4 @@
 import Iinput from './input'
-import { Ibutton } from './input'
+import { Ibutton, IError, SetError, ISelect } from './input'
 
-export type { Iinput, Ibutton }
+export type { Iinput, Ibutton, IError, SetError, ISelect }

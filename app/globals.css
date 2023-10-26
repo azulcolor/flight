@@ -2,6 +2,7 @@
 
 @import '../styles/ticket.css';
 @import '../styles/header.css';
+@import '../styles/editData.css';
 
 @tailwind base;
 @tailwind components;

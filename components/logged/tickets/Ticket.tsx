@@ -1,13 +1,39 @@
 import { ITicketProps } from '@/types/logged'
 import { Foot, Head, Lines } from '.'
-import { ticketInfo } from '@/utils/constants'
+import { ticketInfo, ticketStatus } from '@/utils/constants'
+import Link from 'next/link'
 
-export default function Ticket({ value, status, color, startDate, endDate, setInfo }: ITicketProps) {
+export default function Ticket({
+  value,
+  nombreStatus,
+  status,
+  fecha_inicio,
+  fecha_fin,
+  id_certificado,
+  setInfo,
+  numero_cupon,
+}: ITicketProps) {
+  const realStatus = ticketStatus[status - 1]
+
+  let info = ticketInfo[realStatus as unknown as keyof typeof ticketInfo]
+  info.certificate = id_certificado
+
   return (
-    <div className={`${color} ticket__container`} onClick={() => setInfo(ticketInfo[color as keyof typeof ticketInfo])}>
-      <Head value={value} status={status} />
-      <Lines />
-      <Foot startDate={startDate} endDate={endDate} />
-    </div>
+    <>
+      <div className={`hidden lg:flex ${realStatus} ticket__container`} onClick={() => setInfo(info)}>
+        <Head value={value} status={nombreStatus} number={numero_cupon} certificate={id_certificado} />
+        <Lines />
+        <Foot startDate={fecha_inicio} endDate={fecha_fin} />
+      </div>
+      <Link
+        className={`flex lg:hidden ${realStatus} ticket__container`}
+        href='/tickets/information?status=&certificate='
+        as={`/tickets/information?status=${realStatus}&certificate=${id_certificado}`}
+      >
+        <Head value={value} status={nombreStatus} number={numero_cupon} certificate={id_certificado} />
+        <Lines />
+        <Foot startDate={fecha_inicio} endDate={fecha_fin} />
+      </Link>
+    </>
   )
 }

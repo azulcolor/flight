@@ -1,19 +1,29 @@
 import { Dispatch, SetStateAction } from 'react'
 import { IInfoStructure } from '.'
 
-export default interface ITicketProps {
-  value: string
-  status: string
-  color: string
-  startDate: string
-  endDate: string
-  setInfo: Dispatch<SetStateAction<IInfoStructure>>
-}
-
 export interface ITicket {
   value: string
-  status: string
+  status: number
+  nombreStatus: string
   color: string
+  fecha_inicio: string
+  fecha_fin: string
+  id_certificado: number
+  numero_cupon: number
+}
+
+export interface ITicketHead {
+  value: string
+  status: string
+  certificate: number
+  number: number
+}
+
+export interface ITicketFoot {
   startDate: string
   endDate: string
+}
+
+export default interface ITicketProps extends ITicket {
+  setInfo: Dispatch<SetStateAction<IInfoStructure>>
 }

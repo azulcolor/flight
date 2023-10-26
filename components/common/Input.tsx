@@ -1,6 +1,12 @@
 import { Iinput } from '@/types'
 
-export default function Input({ value, setValue, type, placeholder, focus = false }: Iinput) {
+export default function Input({ value, setValue, type, placeholder, focus = false, setError }: Iinput) {
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value)
+
+    if (setError) setError({ ok: true, message: '' })
+  }
+
   return (
     <input
       type={type}
@@ -9,7 +15,7 @@ export default function Input({ value, setValue, type, placeholder, focus = fals
       autoFocus={focus}
       value={value}
       className='input'
-      onChange={(e) => setValue(e.target.value)}
+      onChange={(e) => handleInput(e)}
     />
   )
 }

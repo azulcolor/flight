@@ -12,6 +12,7 @@ export interface ITicketInfo {
 export interface IInfoStructure {
   title: string
   message: string
+  certificate?: number | string
   image: string
   status: string
 }
