@@ -6,7 +6,7 @@ import { logout } from '@/utils/auth'
 import { routes } from '@/utils/constants'
 
 export default function Nav() {
-  const { tickets, bankData, about, changePassword } = routes
+  const { tickets, bankData, about, changePassword, redeemTicket } = routes
 
   return (
     <>
@@ -15,13 +15,16 @@ export default function Nav() {
           <Link href={tickets}>Cupones</Link>
         </li>
         <li>
-          <Link href={bankData}>Datos Bancarios</Link>
+          <Link href={bankData}>Datos bancarios</Link>
         </li>
         <li>
           <Link href={about}>Contacto</Link>
         </li>
         <li>
           <Link href={changePassword}>Cambio de contraseña</Link>
+        </li>
+        <li>
+          <Link href={redeemTicket}>Canjeo de cupones</Link>
         </li>
       </ul>
       <button className='logout' onClick={logout}>

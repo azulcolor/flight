@@ -1,45 +1,36 @@
 'use client'
 
-import { flightApi } from '@/api'
 import TicketInfo from '@/components/logged/ticketInfo/TicketInfo'
 import { Ticket } from '@/components/logged/tickets'
 import { IInfoStructure, ITicket } from '@/types/logged'
 import { ticketInfo } from '@/utils/constants'
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
+import { FilterArray, FilterObject } from '../../../components/common/Filter'
+import { useCoupons } from '@/hooks/useCoupons'
+import { filter } from '@/services/filter'
 
 export default function Tickets() {
   const [info, setInfo] = useState<IInfoStructure>(ticketInfo.default)
-  const [tickets, setTickets] = useState<ITicket[]>([])
-  const certificates = useRef<string[]>([])
+  const [certificateFilter, setCertificateFilter] = useState<string>('Todos')
+  const [statusFilter, setStatusFilter] = useState<string>('0')
+  const [filterTickets, setFilterTickets] = useState<ITicket[]>([])
 
+  const { certificates, tickets, status } = useCoupons()
   useEffect(() => {
-    const fetchCupones = async () => {
-      const certificatesValue = localStorage.getItem('certificates')
-      const certificados = JSON.parse(certificatesValue || '[]')
-      certificates.current = certificados
-      console.log(certificates.current)
-
-      try {
-        const cupones = await flightApi.post('coupons', certificates.current)
-        setTickets(cupones.data.cupons)
-      } catch (error) {}
-    }
-    fetchCupones()
-  }, [])
+    setFilterTickets(tickets)
+    filter(certificateFilter, statusFilter, tickets, setFilterTickets)
+  }, [certificateFilter, tickets, statusFilter])
 
   return (
     <div>
       <section className='filter'>
-        <p>Certificados: </p>
-        <p>Todos</p>
-        {certificates.current.map((certificate, index) => (
-          <p key={index}>{certificate}</p>
-        ))}
+        <FilterArray options={certificates.current} value={certificateFilter} setValue={setCertificateFilter} label='Certificados' />
+        <FilterObject options={status} value={statusFilter} setValue={setStatusFilter} label='Estado' />
       </section>
 
       <div className='ticket__page'>
         <div className='tickets no-scrollbar'>
-          {tickets && tickets.map((ticket, index) => <Ticket key={index} {...ticket} setInfo={setInfo} />)}
+          {tickets && filterTickets.map((ticket, index) => <Ticket key={index} {...ticket} setInfo={setInfo} />)}
         </div>
         <TicketInfo info={info} />
       </div>

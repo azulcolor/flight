@@ -3,6 +3,7 @@
 @import '../styles/ticket.css';
 @import '../styles/header.css';
 @import '../styles/editData.css';
+@import '../styles/redeem.css';
 
 @tailwind base;
 @tailwind components;
@@ -20,11 +21,11 @@ body {
 }
 
 h2 {
-  @apply text-4xl text-title;
+  @apply lg:text-4xl text-base text-title ;
 }
 
 h4, li {
-  @apply text-xl text-text;
+  @apply lg:text-xl text-base text-subtitle-100;
 }
 
 p {
@@ -44,7 +45,19 @@ p {
 }
 
 .button {
-  @apply button__container text-sm  h-10 mt-4 w-72 lg:w-[523px] lg:h-12 lg:text-xl
+  @apply button__container text-sm h-10 mt-4 w-72 lg:w-[523px] lg:h-12 lg:text-xl
+}
+
+.button__cupon {
+  @apply button__container text-sm h-10 w-52 lg:w-[523px] lg:h-12 lg:text-xl
+}
+
+.button__cupon--selected {
+  @apply bg-startProcess-card-50 text-sm h-10 w-52 lg:w-[523px] lg:h-12 lg:text-xl mt-4 rounded-lg text-white
+}
+
+.button__file--selected {
+  @apply bg-startProcess-card-50 text-sm h-10 mt-4 w-72 lg:w-[523px] lg:h-12 lg:text-xl text-white rounded-lg 
 }
 
 .link {

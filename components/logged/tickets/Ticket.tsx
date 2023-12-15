@@ -1,4 +1,4 @@
-import { ITicketProps } from '@/types/logged'
+import { IAvailableCouponProps, ITicketProps } from '@/types/logged'
 import { Foot, Head, Lines } from '.'
 import { ticketInfo, ticketStatus } from '@/utils/constants'
 import Link from 'next/link'
@@ -34,6 +34,34 @@ export default function Ticket({
         <Lines />
         <Foot startDate={fecha_inicio} endDate={fecha_fin} />
       </Link>
+    </>
+  )
+}
+
+export function AvailableCoupon({
+  value,
+  nombreStatus,
+  status,
+  fecha_inicio,
+  fecha_fin,
+  id_certificado,
+  numero_cupon,
+  onClick,
+}: IAvailableCouponProps) {
+  const realStatus = ticketStatus[status - 1]
+
+  return (
+    <>
+      <div className={`hidden lg:flex ${realStatus} ticket__container`} onClick={onClick}>
+        <Head value={value} status={nombreStatus} number={numero_cupon} certificate={id_certificado} />
+        <Lines />
+        <Foot startDate={fecha_inicio} endDate={fecha_fin} />
+      </div>
+      <div className={`flex lg:hidden ${realStatus} ticket__container`} onClick={onClick}>
+        <Head value={value} status={nombreStatus} number={numero_cupon} certificate={id_certificado} />
+        <Lines />
+        <Foot startDate={fecha_inicio} endDate={fecha_fin} />
+      </div>
     </>
   )
 }

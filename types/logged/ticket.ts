@@ -1,7 +1,8 @@
-import { Dispatch, SetStateAction } from 'react'
+import { Dispatch, MouseEventHandler, SetStateAction } from 'react'
 import { IInfoStructure } from '.'
 
 export interface ITicket {
+  id: number
   value: string
   status: number
   nombreStatus: string
@@ -26,4 +27,8 @@ export interface ITicketFoot {
 
 export default interface ITicketProps extends ITicket {
   setInfo: Dispatch<SetStateAction<IInfoStructure>>
+}
+
+export interface IAvailableCouponProps extends ITicket {
+  onClick: MouseEventHandler<HTMLDivElement>
 }

@@ -7,7 +7,7 @@ import { useEffect, useState, useRef } from 'react'
 
 export default function HamburguerMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const { tickets, bankData, about, changePassword } = routes
+  const { tickets, bankData, about, changePassword, redeemTicket } = routes
 
   let menuRef = useRef<HTMLDivElement>(null)
 
@@ -40,6 +40,7 @@ export default function HamburguerMenu() {
         <Link href={bankData}>Datos Bancarios</Link>
         <Link href={about}>Contacto</Link>
         <Link href={changePassword}>Cambiar contraseña</Link>
+        <Link href={redeemTicket}>Canjear cupón</Link>
         <button className='text-left' onClick={logout}>
           Cerrar sesión
         </button>

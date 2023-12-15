@@ -28,6 +28,10 @@ export interface IError {
 export type SetError = Dispatch<SetStateAction<IError>>
 
 export interface Ibutton {
-  children: React.ReactNode
+  children?: React.ReactNode
   buttonFunction: any
+}
+
+export interface ICouponValor extends Ibutton {
+  hasValor: boolean
 }

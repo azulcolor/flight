@@ -10,6 +10,7 @@ const routes = {
   successBank: '/bankData/success',
   changePassword: '/changePassword',
   successPassword: '/changePassword/success',
+  redeemTicket: '/redeemTicket',
 }
 
 export default routes

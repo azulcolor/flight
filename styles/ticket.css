@@ -11,11 +11,11 @@
   }
 
   .tickets {
-    @apply flex flex-col items-center gap-4 lg:flex-row lg:flex-wrap lg:col-span-3 lg:gap-9 h-auto lg:overflow-scroll lg:max-h-[85vh] lg:scroll-pb-32
+    @apply flex flex-col items-center lg:items-start gap-4 lg:flex-row lg:flex-wrap lg:col-span-3 lg:gap-9 h-auto lg:overflow-scroll lg:max-h-[85vh] lg:scroll-pb-32
   }
   
   .ticket__container {
-    @apply w-72 h-48 rounded-3xl px-2 pt-6 pb-7 lg:flex flex-col justify-between lg:w-[391px] lg:h-60 lg:cursor-pointer
+    @apply w-72 h-48 rounded-3xl px-2 pt-4 pb-4 lg:flex flex-col justify-between lg:w-[391px] lg:h-60 lg:cursor-pointer
   }
   
   .head__container {
@@ -68,4 +68,8 @@
   
   .refused {
     @apply bg-refused-card-100 hover:bg-refused-card-50 duration-300
+  }
+
+  .grayCard {
+    @apply bg-subtitle-100 hover:bg-subtitle-50 duration-300
   }

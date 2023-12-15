@@ -18,7 +18,10 @@ export const theme = {
         '100': '#007EA9'
       },
       'secondary'    : '#008D68',
-      'subtitle'     : '#5F728C',
+      'subtitle'     : {
+        '50' : '#4F5F75',
+        '100': '#5F728C'
+      },
       'text'         : '#7A7A7A',
       'title'        : '#1F1F1F',
       'available-card' : {

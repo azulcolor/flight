@@ -4,14 +4,14 @@ import { ITicketFoot } from '@/types/logged'
 
 export default function Foot({ startDate, endDate }: ITicketFoot) {
   return (
-    <div className='flex justify-between px-3'>
+    <div className='flex justify-between px-3 items-center gap-4'>
       <div>
         <p className='text-background lg:text-xl'>Valido de</p>
         <p className=' text-[10px] text-background lg:text-sm'>
           {startDate} al {endDate}
         </p>
       </div>
-      <Image src='/images/plane.png' alt='plane' width={40} height={40} />
+      <Image src='/images/plane.png' alt='plane' width={32} height={10} className='h-8' />
     </div>
   )
 }
