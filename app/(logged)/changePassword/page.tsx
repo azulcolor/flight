@@ -19,7 +19,7 @@ export default function ChangePassword() {
 
   return (
     <div className='data__container'>
-      <h1 className='password__title'>Datos bancarios</h1>
+      <h1 className='password__title'>Cambiar contraseña</h1>
       <Image src='/images/passwordImage.png' alt='bank' width={300} height={300} />
 
       <div className='input__container gap-2'>

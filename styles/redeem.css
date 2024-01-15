@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .button_info {
-    @apply bg-title w-56 h-16 rounded-r-lg flex items-center justify-between pl-6 pr-2 gap-3 shadow-xl mt-8
+    @apply bg-title w-56 h-16 rounded-r-lg flex items-center justify-between pl-6 pr-2 gap-3 shadow-xl mt-8 lg:w-72 lg:h-20 lg:pr-6 lg:mt-12
 }
 
 .button_info:hover {
@@ -11,5 +11,5 @@
 }
 
 .documents__status {
-    @apply flex flex-col lg:flex-row lg:justify-center w-full items-center lg:gap-12 gap-6 mt-10 lg:px-28 flex-wrap h-auto
+    @apply flex flex-col lg:flex-row lg:justify-center w-full items-center lg:gap-12 gap-6 mt-10 lg:px-28 flex-wrap h-auto lg:mt-20
 }

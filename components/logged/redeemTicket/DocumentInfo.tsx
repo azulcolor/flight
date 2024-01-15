@@ -23,7 +23,7 @@ function Footer() {
         <h3 className='text-white'>Certificados: </h3>
         <p className='text-white'>12344 - 24435 - 32535</p>
       </div>
-      <Image src='/images/plane.png' alt='plane' width={32} height={10} className='h-8' />
+      <Image src='/images/plane.png' alt='plane' width={32} height={10} className='h-8 lg:h-10 lg:w-10' />
     </section>
   )
 }

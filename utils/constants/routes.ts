@@ -11,6 +11,7 @@ const routes = {
   changePassword: '/changePassword',
   successPassword: '/changePassword/success',
   redeemTicket: '/redeemTicket',
+  successRedeem: '/redeemTicket/success',
 }
 
 export default routes

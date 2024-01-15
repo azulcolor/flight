@@ -14,6 +14,7 @@ export default function Ticket({
   numero_cupon,
 }: ITicketProps) {
   const realStatus = ticketStatus[status - 1]
+  console.log(status)
 
   let info = ticketInfo[realStatus as unknown as keyof typeof ticketInfo]
   info.certificate = id_certificado
