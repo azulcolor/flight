@@ -6,8 +6,6 @@ const login: IloginFunction = async (userData, setError) => {
   try {
     const response: ILoginApiResponse = await flightApi.post('login', userData)
 
-    console.log(response.data)
-
     const { token, certificados } = response.data
 
     if (token) Cookies.set('token', token)

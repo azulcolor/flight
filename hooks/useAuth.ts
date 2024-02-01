@@ -14,7 +14,6 @@ const useAuth = () => {
 export const isLogged = async () => {
   try {
     const { data } = await flightApi.get('/token')
-    console.log(data)
     const { ok } = data
     if (!ok) {
       return false

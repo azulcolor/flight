@@ -49,8 +49,8 @@ export const theme = {
         '100' : '#E03C94',
       },
       'refused-card' : {
-        '50'  : '#D52317',
-        '100' : '#ED2316', 
+        '50'  : '#DBB67A',
+        '100' : '#EEC584', 
       }
     },
     backgroundImage: {

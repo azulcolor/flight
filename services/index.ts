@@ -1,3 +1,3 @@
-import { getCertificates, fetchCoupons, fetchAvailableCoupons } from './coupons'
+import { getCertificates, fetchCoupons, fetchActiveCoupons } from './coupons'
 
-export { fetchCoupons, getCertificates, fetchAvailableCoupons }
+export { fetchCoupons, getCertificates, fetchActiveCoupons }

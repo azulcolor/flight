@@ -15,6 +15,12 @@ export const getUserCertificates = async (setCertificates: any) => {
   setCertificates(certificates.data)
 }
 
+export const getAvailableCertificates = async (setCertificates: any, setLoading: any) => {
+  const certificates = await flightApi.get('documents/certificates')
+  setCertificates(certificates.data)
+  setLoading(false)
+}
+
 export const fetchCoupons = async (certificates: MutableRefObject<string[]>, setTickets: (value: SetStateAction<ITicket[]>) => void) => {
   try {
     const cupones = await flightApi.post('coupons', certificates.current)
@@ -29,9 +35,9 @@ export const fetchCouponStatus = async (setStatus: any) => {
   } catch (error) {}
 }
 
-export const fetchAvailableCoupons = async (setTickets: (value: SetStateAction<ITicket[]>) => void, certificate: number) => {
+export const fetchActiveCoupons = async (setTickets: (value: SetStateAction<ITicket[]>) => void, certificate: number) => {
   try {
-    const coupons = await flightApi.get(`coupons/available/${certificate}`)
+    const coupons = await flightApi.get(`coupons/active/${certificate}`)
     setTickets(coupons.data)
   } catch (error) {}
 }

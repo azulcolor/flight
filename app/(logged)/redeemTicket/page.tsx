@@ -1,29 +1,19 @@
-import DocumentInfo from '@/components/logged/redeemTicket/DocumentInfo'
-import { RedeemButton } from '@/components/logged/redeemTicket/InfoButton'
+'use client'
 
-const dataTest = [
-  {
-    status: 'approved',
-    statusName: 'En revisión',
-  },
-  {
-    status: 'active',
-    statusName: 'Rechazado',
-  },
-  {
-    status: 'grayCard',
-    statusName: 'En proceso',
-  },
-]
+import DocumentInfo from '@/components/logged/redeemTicket/DocumentInfo'
+import { NoRedeemAvailable, RedeemButton } from '@/components/logged/redeemTicket/InfoButton'
+import { useCertificates } from '@/hooks/useCoupons'
 
 export default function RedeemTicket() {
+  const { certificates, loading } = useCertificates()
+
+  if (loading) return <></>
+
   return (
     <>
-      <RedeemButton />
+      {certificates.length !== 0 ? <RedeemButton /> : <NoRedeemAvailable />}
       <div className='documents__status'>
-        {dataTest.map((data) => (
-          <DocumentInfo status={data.status} statusName={data.statusName} key={data.status} />
-        ))}
+        <DocumentInfo />
       </div>
     </>
   )

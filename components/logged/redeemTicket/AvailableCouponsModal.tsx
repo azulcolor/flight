@@ -1,9 +1,9 @@
-import { useAvailableCoupons } from '@/hooks/useCoupons'
 import { Box, Modal } from '@mui/material'
 import { AvailableCoupon } from '../tickets/Ticket'
+import { useActiveCoupons } from '@/hooks/useCoupons'
 
 export default function AvailableCouponsModal({ isModalOpen, setIsModalOpen, certificate, setIdCoupons, setChoosenCertificates }: any) {
-  var { tickets, setTickets } = useAvailableCoupons(certificate)
+  var { tickets, setTickets } = useActiveCoupons(certificate)
 
   const onClick = (idCoupon: number) => {
     setIdCoupons((prevIdCoupons: any) => prevIdCoupons.concat(idCoupon))

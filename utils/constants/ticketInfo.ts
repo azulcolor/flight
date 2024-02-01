@@ -71,4 +71,43 @@ export const ticketStatus = [
   'ertert',
 ]
 
+export const ticketTest = [
+  {
+    id: 7,
+    name: 'active',
+  },
+  {
+    id: 8,
+    name: 'revision',
+  },
+  {
+    id: 9,
+    name: 'used',
+  },
+  {
+    id: 10,
+    name: 'expired',
+  },
+  {
+    id: 11,
+    name: 'refused',
+  },
+  {
+    id: 12,
+    name: 'approved',
+  },
+  {
+    id: 13,
+    name: 'available',
+  },
+  {
+    id: 14,
+    name: 'refunded',
+  },
+  {
+    id: 37,
+    name: 'startProcess',
+  },
+]
+
 export default ticketInfo

@@ -2,6 +2,7 @@ import { IAvailableCouponProps, ITicketProps } from '@/types/logged'
 import { Foot, Head, Lines } from '.'
 import { ticketInfo, ticketStatus } from '@/utils/constants'
 import Link from 'next/link'
+import { ticketTest } from '@/utils/constants/ticketInfo'
 
 export default function Ticket({
   value,
@@ -13,8 +14,10 @@ export default function Ticket({
   setInfo,
   numero_cupon,
 }: ITicketProps) {
-  const realStatus = ticketStatus[status - 1]
-  console.log(status)
+  const ticket = ticketTest.find((item) => item.id === status)
+  var realStatus = 'default'
+
+  if (ticket) realStatus = ticket.name
 
   let info = ticketInfo[realStatus as unknown as keyof typeof ticketInfo]
   info.certificate = id_certificado

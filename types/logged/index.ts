@@ -3,6 +3,7 @@ import { ITicket, ITicketHead, ITicketFoot, IAvailableCouponProps } from './tick
 import { ITicketInfo, IInfoStructure } from './ticketInfo'
 import { IBankData } from './update'
 import { FilterArrayProps, FilterObjectProps, FilterProps } from './filter'
+import { IDocuments } from './documents'
 
 export type {
   ITicketProps,
@@ -16,4 +17,5 @@ export type {
   FilterArrayProps,
   FilterObjectProps,
   FilterProps,
+  IDocuments,
 }

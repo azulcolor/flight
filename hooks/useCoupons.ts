@@ -1,7 +1,7 @@
 import { ITicket } from '@/types/logged'
-import { fetchCoupons, getCertificates, fetchAvailableCoupons } from '@/services'
+import { fetchCoupons, getCertificates, fetchActiveCoupons } from '@/services'
 import { useEffect, useRef, useState } from 'react'
-import { fetchCouponStatus, getUserCertificates } from '@/services/coupons'
+import { fetchCouponStatus, getAvailableCertificates } from '@/services/coupons'
 
 export const useCoupons = () => {
   const certificates = useRef<string[]>([])
@@ -17,22 +17,23 @@ export const useCoupons = () => {
   return { tickets, certificates, setTickets, status }
 }
 
-export const useAvailableCoupons = (certificate: number) => {
+export const useActiveCoupons = (certificate: number) => {
   const [tickets, setTickets] = useState<ITicket[]>([])
 
   useEffect(() => {
-    fetchAvailableCoupons(setTickets, certificate)
+    fetchActiveCoupons(setTickets, certificate)
   }, [certificate])
 
   return { tickets, setTickets }
 }
 
 export const useCertificates = () => {
+  const [loading, setLoading] = useState(true)
   const [certificates, setCertificates] = useState<string[]>([])
 
   useEffect(() => {
-    getUserCertificates(setCertificates)
+    getAvailableCertificates(setCertificates, setLoading)
   }, [])
 
-  return { certificates, setCertificates }
+  return { certificates, setCertificates, loading }
 }

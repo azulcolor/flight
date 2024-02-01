@@ -46,14 +46,11 @@ export default function Form() {
     formData.append('certificates', JSON.stringify(choosenCertificates))
     formData.append('coupons', JSON.stringify(idCoupons))
 
-    console.log(idCoupons)
-    const response = await flightApi.post('documents', formData, {
+    await flightApi.post('documents', formData, {
       headers: {
         'Content-type': 'multipart/form-data',
       },
     })
-
-    console.log(response)
 
     alert('Formulario enviado')
 
