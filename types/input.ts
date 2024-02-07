@@ -34,4 +34,5 @@ export interface Ibutton {
 
 export interface ICouponValor extends Ibutton {
   hasValor: boolean
+  redeem: any
 }

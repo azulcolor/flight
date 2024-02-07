@@ -1,17 +1,19 @@
-const routes = {
-  login: '/',
-  register: '/register',
-  forgotPassword: '/forgot',
-  contact: '/contact',
-  about: '/about',
-  tickets: '/tickets',
-  ticket: '/tickets/',
-  bankData: '/bankData',
-  successBank: '/bankData/success',
-  changePassword: '/changePassword',
-  successPassword: '/changePassword/success',
-  redeemTicket: '/redeemTicket',
-  successRedeem: '/redeemTicket/success',
+export const routes = (lang: string) => {
+  return {
+    login: `/${lang}`,
+    register: `/${lang}/register`,
+    forgotPassword: `/${lang}/forgotPassword`,
+    contact: `/${lang}/contact`,
+    about: `/${lang}/about`,
+    tickets: `/${lang}/tickets`,
+    ticket: `/${lang}/ticket`,
+    bankData: `/${lang}/bankData`,
+    successBank: `/${lang}/bankData/success`,
+    changePassword: `/${lang}/changePassword`,
+    successPassword: `/${lang}/changePassword/success`,
+    redeemTicket: `/${lang}/redeemTicket`,
+    successRedeem: `/${lang}/redeemTicket/success`,
+  }
 }
 
 export default routes

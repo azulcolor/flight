@@ -1,9 +1,9 @@
 import { IforgotPasswordApiResponse, IforgotPasswordFunction, IResetPasswordFunction } from '@/types/auth'
 import { flightApi } from '@/api'
 
-export const forgotPassword: IforgotPasswordFunction = async (userData) => {
+export const forgotPassword: IforgotPasswordFunction = async (userData, lang) => {
   try {
-    window.location.href = '/forgot/reset'
+    window.location.href = `/${lang}/forgot/reset`
 
     const response: IforgotPasswordApiResponse = await flightApi.post('forgot-password', {
       userData,

@@ -14,5 +14,5 @@ interface IRegisterResponse {
   message: string
 }
 
-export type IRegisterFunction = (userData: IRegisterRequest, setError: SetError) => Promise<void>
+export type IRegisterFunction = (userData: IRegisterRequest, setError: SetError, lang: string) => Promise<void>
 export type IRegisterApiResponse = AxiosResponse<IRegisterResponse>

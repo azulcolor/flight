@@ -19,7 +19,7 @@ interface IResetPasswordResponse {
   succesful: boolean
 }
 
-export type IforgotPasswordFunction = (userData: IForgotPasswordRequest) => Promise<IResetPasswordResponse>
+export type IforgotPasswordFunction = (userData: IForgotPasswordRequest, lang: string) => Promise<IResetPasswordResponse>
 export type IforgotPasswordApiResponse = AxiosResponse<IForgotPasswordResponse>
 
 export type IResetPasswordFunction = (userData: IResetPasswordRequest, token: string, setError: SetError) => Promise<void>

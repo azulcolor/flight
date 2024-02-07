@@ -1,6 +1,7 @@
+/* eslint-disable quotes */
 import { ITicketInfo } from '@/types/logged'
 
-const ticketInfo: ITicketInfo = {
+const ticketInfoEs: ITicketInfo = {
   default: {
     title: '¡Bienvenido a Flight',
     message:
@@ -51,6 +52,66 @@ const ticketInfo: ITicketInfo = {
     image: '/images/bad.png',
     status: 'available',
   },
+}
+
+const ticketInfoEn: ITicketInfo = {
+  default: {
+    title: 'Welcome to Flight!',
+    message:
+      'To begin viewing the information of your coupons, you should click on the one you want to see, and its information will appear in this section.',
+    image: '/images/good.png',
+    status: 'default',
+  },
+  startProcess: {
+    title: 'In processing!',
+    message: 'We are verifying that everything is in order and meets the requirements. If you have any questions, you can contact us. ',
+    image: '/images/good.png',
+    status: 'startProcess',
+  },
+  active: {
+    title: 'Everything looks good!',
+    message: `Contact us to change the coupon. Don't forget that your certificate is: `,
+    image: '/images/good.png',
+    status: 'active',
+  },
+  approved: {
+    title: 'Your coupon was approved!',
+    message: 'Congratulations! See you next year so you can redeem another coupon.',
+    image: '/images/good.png',
+    status: 'approved',
+  },
+  refunded: {
+    title: 'Your coupon was refunded!',
+    message: 'Congratulations! Your coupon was successfully refunded.',
+    image: '/images/good.png',
+    status: 'refunded',
+  },
+  expired: {
+    title: 'The coupon has expired!',
+    message: `But don't worry, you can try with the other coupons.`,
+    image: '/images/bad.png',
+    status: 'expired',
+  },
+  refused: {
+    title: 'Unfulfilled Requirements',
+    message: 'Do you have any questions? Feel free to contact us.',
+    image: '/images/bad.png',
+    status: 'refused',
+  },
+  available: {
+    title: 'Too soon!',
+    message: `It's not yet the date to use the coupon. Could you take a look at other coupons?`,
+    image: '/images/bad.png',
+    status: 'available',
+  },
+}
+
+const ticketInfo = (leng: string): ITicketInfo => {
+  if (leng === 'es') {
+    return ticketInfoEs
+  } else {
+    return ticketInfoEn
+  }
 }
 
 export const ticketStatus = [

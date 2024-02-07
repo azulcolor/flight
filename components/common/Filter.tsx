@@ -24,6 +24,7 @@ function Filter({ value, setValue, label, children }: FilterProps) {
 }
 
 export function FilterObject({ value, setValue, label, options }: FilterObjectProps) {
+  console.log(options)
   return (
     <Filter value={value} setValue={setValue} label={label}>
       {options.map((option) => (

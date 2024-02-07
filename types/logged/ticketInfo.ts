@@ -1,4 +1,5 @@
 export interface ITicketInfo {
+  certificate?: number | string
   default: IInfoStructure
   startProcess: IInfoStructure
   active: IInfoStructure
@@ -19,4 +20,6 @@ export interface IInfoStructure {
 
 export interface IInfo {
   info: IInfoStructure
+  lang: string
+  coupon: any
 }

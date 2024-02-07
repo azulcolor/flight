@@ -31,6 +31,7 @@ export const fetchCoupons = async (certificates: MutableRefObject<string[]>, set
 export const fetchCouponStatus = async (setStatus: any) => {
   try {
     const status = await flightApi.get('status/coupons')
+    console.log(status.data)
     setStatus(status.data)
   } catch (error) {}
 }

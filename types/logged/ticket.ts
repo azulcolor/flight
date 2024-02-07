@@ -11,6 +11,8 @@ export interface ITicket {
   fecha_fin: string
   id_certificado: number
   numero_cupon: number
+  coupon: any
+  lang: string
 }
 
 export interface ITicketHead {
@@ -18,11 +20,13 @@ export interface ITicketHead {
   status: string
   certificate: number
   number: number
+  coupon: any
 }
 
 export interface ITicketFoot {
   startDate: string
   endDate: string
+  coupon: any
 }
 
 export default interface ITicketProps extends ITicket {

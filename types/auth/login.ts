@@ -12,5 +12,5 @@ interface ILoginResponse {
   certificados?: string[]
 }
 
-export type IloginFunction = (userData: ILoginRequest, setError: SetError) => Promise<void>
+export type IloginFunction = (userData: ILoginRequest, setError: SetError, lang: string) => Promise<void>
 export type ILoginApiResponse = AxiosResponse<ILoginResponse>

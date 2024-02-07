@@ -5,9 +5,9 @@ import { routes } from '@/utils/constants'
 import Link from 'next/link'
 import { useEffect, useState, useRef } from 'react'
 
-export default function HamburguerMenu() {
+export default function HamburguerMenu({ lang, header }: { lang: string; header: any }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const { tickets, bankData, about, changePassword, redeemTicket } = routes
+  const { tickets, bankData, about, changePassword, redeemTicket } = routes(lang)
 
   let menuRef = useRef<HTMLDivElement>(null)
 
@@ -36,13 +36,13 @@ export default function HamburguerMenu() {
       <div className='w-4 hamburguer__line' />
       <div className='w-6 hamburguer__line' />
       <div className={`${isMenuOpen ? 'flex' : 'hidden'} menu__mobile`}>
-        <Link href={tickets}>Cupones</Link>
-        <Link href={bankData}>Datos Bancarios</Link>
-        <Link href={about}>Contacto</Link>
-        <Link href={changePassword}>Cambiar contraseña</Link>
-        <Link href={redeemTicket}>Canjear cupón</Link>
-        <button className='text-left' onClick={logout}>
-          Cerrar sesión
+        <Link href={tickets}>{header.coupons}</Link>
+        <Link href={bankData}>{header.bankData}</Link>
+        <Link href={about}>{header.contact}</Link>
+        <Link href={changePassword}>{header.changePassword}</Link>
+        <Link href={redeemTicket}>{header.redeemTicket}</Link>
+        <button className='text-left' onClick={() => logout(lang)}>
+          {header.logout}
         </button>
       </div>
     </div>

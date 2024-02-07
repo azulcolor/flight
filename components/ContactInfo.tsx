@@ -2,9 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { contact } from '@/utils/constants'
+import { getDictionary } from '@/app/[lang]/dictionaries'
 
-export default function ContactInfo({ isLogged }: { isLogged: boolean }) {
-  const contactElements = contact.map((item, index) => {
+export default function ContactInfo({ isLogged, lang }: { isLogged: boolean; lang: string }) {
+  const dict = getDictionary(lang)
+
+  const contactElements = contact(dict).map((item, index) => {
     return (
       <div className='column__center mb-20 w-9/12' key={index}>
         <Image src={`/images/${item.image}`} className='w-32' width={300} height={300} alt={item.title} />
@@ -26,10 +29,10 @@ export default function ContactInfo({ isLogged }: { isLogged: boolean }) {
       {contactElements}
       {!isLogged && (
         <Link
-          href='/'
+          href={`/${lang}`}
           className='text-secondary text-base text-center hover:text-secondary lg:text-lg fixed bottom-0 left-0 w-full pb-4 pt-1 bg-background'
         >
-          Iniciar sesión
+          {dict.contact.link}
         </Link>
       )}
     </section>

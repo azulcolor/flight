@@ -1,0 +1,122 @@
+{
+    "login": {
+        "title": "Login",
+        "username": "Username",
+        "password": "Password",
+        "button": "Continue"
+    },
+    "authLinks": {
+        "forgot": "Forgot your password?",
+        "registerQuestion": "Don't have an account?",
+        "register": "Create an account", 
+        "contact": "Contact us"
+    },
+    "contact": {
+        "phone": "Phone",
+        "email": "Email",
+        "address": "Address",
+        "link": "Login"
+    },
+    "register" : {
+        "title": "Register",
+        "fullname" : "Fullname",
+        "email": "Email",
+        "username": "Username",
+        "password": "Password",
+        "button": "Continue",
+        "membership": "Membership number",
+        "membershipAdvice": "The email and membership number should be those provided in the contract.",
+        "loginQuestion": "Already have an account?",
+        "login": "Login",
+        "contact": "Contact us",
+        "success": {
+            "title": "Perfect!",
+            "message": "The email has been sent to activate your account.",
+            "back": "Back to login"
+        }
+    },
+    "secondStep": {
+        "unsuccess": {
+            "title": "The error has occurred!",
+            "login": "Login"
+        },
+        "success": {
+            "title": "Your account has been created successfully!",
+            "message": "Now you can login with your username and password.",
+            "login": "login"
+        }
+    },
+    "forgot": {
+        "title": "Password recovery",
+        "message": "Provide the email you used for registration, and we'll send you a link to recover your password",
+        "email": "Email",
+        "button": "Send",
+        "loginQuestion": "Do you remember your password?",
+        "login": "Login",
+        "contact": "Contact us"
+    },
+    "header" : {
+        "coupons": "Coupons",
+        "bankData": "Bank details",
+        "contact": "Contact us",
+        "changePassword": "Change password",
+        "redeemTicket": "Redeem coupon",
+        "logout": "Logout"
+    },
+    "coupon": {
+        "certificate": "Certificate",
+        "coupon": "Coupon",
+        "valid": "Valid from",
+        "contact": "See contact",
+        "seeCoupon": "See coupon",
+        "all": "All",
+        "filter": {
+            "certificates": "Certificates",
+            "status": "Status"
+        }
+    },
+    "bank": {
+        "title": "Bank details",
+        "name": "Name",
+        "account": "Account",
+        "bank": "Bank",
+        "clabe": "CLABE",
+        "update": "Update",
+        "success": {
+            "title": "your data has been updated!",
+            "message": "the bank details have been updated successfully.",
+            "button": "see coupons"
+        }
+    },
+    "password": {
+            "title": "Change password",
+            "current": "Current password",
+            "new": "New password",
+            "confirm": "Confirm new password",
+            "button": "Update",
+            "success": {
+                "title": "Your password has been updated!",
+                "message": "The password has been updated successfully.",
+                "button": "see coupons"
+            }
+        },
+    "redeem": {
+            "true": "Redeem coupon",
+            "false": "You have no more shipments",
+            "shipments": "See shipments",
+            "certificates": "Certificates",
+            "choose": "Choose a certificate",
+            "couponMessage": "Choose the coupons from the certificates you want to use",
+            "couponButton": "Select coupons",
+            "selectedCoupon": "Coupon selected",
+            "documentMessage": "Upload the required documentation for the coupons you selected.",
+            "documentButton": "Select PDF File",
+            "sendMessage": "Remember to verify your information before proceeding.",
+            "sendButton": "Submit Shipment",
+            "success": {
+                "title": "Successfully sent!",
+                "message": "Your document has been successfully submitted",
+                "button": "See coupons"
+            }
+        }
+    }

@@ -1,0 +1,117 @@
+{
+    "login": {
+        "title": "Iniciar sesión",
+        "username": "Usuario",
+        "password": "Contraseña",
+        "button": "Continuar"
+    },
+    "authLinks": {
+        "forgot": "¿Olvidaste tu contraseña?",
+        "registerQuestion": "¿No tienes una cuenta?",
+        "register": "Crea una cuenta", 
+        "contact": "Contáctanos"
+    },
+    "contact": {
+        "phone": "Teléfono",
+        "email": "Correo Electrónico",
+        "address": "Dirección",
+        "link": "Iniciar sesión"
+    },
+    "register" : {
+        "title": "Registrarse",
+        "fullname" : "Nombre completo",
+        "email": "Correo Electrónico",
+        "username": "Nombre de usuario",
+        "password": "Contraseña",
+        "button": "Continuar",
+        "membersip": "Número de membresía",
+        "membershipAdvice": "El correo y el número de membresía deberán ser los proporcionados en el contrato",
+        "loginQuestion": "¿Ya tienes una cuenta?",
+        "login": "Iniciar sesión",
+        "contact": "Contáctanos"
+    },
+    "secondStep": {
+        "unsuccess": {
+            "title": "¡Ha ocurrido un error!",
+            "login": "Iniciar sesión"
+        },
+        "success": {
+            "title": "¡Su cuenta ha sido creada exitosamente!",
+            "message": "Ahora puedes iniciar sesión con tu usuario y contraseña",
+            "login": "Iniciar sesión"
+        }
+    },
+    "forgot": {
+        "title": "Recuperar contraseña",
+        "message": "Proporciona el correo con el que te registraste y te enviaremos un enlace para recuperar tu contraseña",
+        "email": "Correo Electrónico",
+        "button": "Enviar",
+        "loginQuestion": "¿Ya recuerdas tu contraseña?",
+        "login": "Iniciar sesión",
+        "contact": "Contáctanos"
+    },
+    "header" : {
+        "coupons": "Cupones",
+        "bankData": "Datos Bancarios",
+        "contact": "Contáctanos",
+        "changePassword": "Cambiar contraseña",
+        "redeemTicket": "Canjear cupón",
+        "logout": "Cerrar sesión"
+    },
+    "coupon": {
+        "certificate": "Certificado",
+        "coupon": "Cupón",
+        "valid": "Válido de",
+        "contact": "Ver contacto",
+        "seeCoupon": "See coupon",
+        "all": "Todos",
+        "filter": {
+            "certificates": "Certificates",
+            "status": "Status"
+        }
+    },
+    "bank": {
+        "title": "Datos bancarios",
+        "name": "Nombre",
+        "account": "Cuenta",
+        "bank": "Banco",
+        "clabe": "CLABE",
+        "update": "Actualizar",
+        "success": {
+            "title": "¡Tus datos han sido actualizados!",
+            "message": "Tus datos bancarios de han actualizado correctamente",
+            "button": "see coupons"
+        }
+    },
+    "password": {
+            "title": "Change password",
+            "current": "Current password",
+            "new": "New password",
+            "confirm": "Confirm new password",
+            "button": "Update",
+            "success": {
+                "title": "Your password has been updated!",
+                "message": "The password has been updated successfully.",
+                "button": "see coupons"
+            }
+        },
+    "redeem": {
+            "true": "Canjear cupones",
+            "false": "No tiene más envíos",
+            "shipments": "Ver envíos",
+            "certificates": "Certificados",
+            "couponMessage": "Escoge los cupones de los certificados que quieras usar",
+            "couponButton": "Seleccionar cupón",
+            "selectedCoupon": "Cupón seleccionado",
+            "documentMessage": "Sube la documentación requerida de los cupones que escogiste",
+            "documentButton": "Seleccionar archivo PDF",
+            "sendMessage": "Recuerda verificar tus datos antes de realizar el",
+            "sendButton": "Realizar envío",
+            "success": {
+                "title": "¡Se ha enviado con éxito!",
+                "message": "Tu documento se ha enviado con éxito, pronto será revisada por los administradores.",
+                "button": "Ver cupones"
+            }   
+}
+
+}

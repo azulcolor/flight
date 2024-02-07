@@ -1,9 +1,9 @@
 import cookies from 'js-cookie'
 
-const logout = () => {
+const logout = (lang: string) => {
   cookies.remove('token')
   localStorage.removeItem('certificates')
-  window.location.href = '/'
+  window.location.href = `/${lang}`
 }
 
 export default logout

@@ -2,7 +2,14 @@ import { Box, Modal } from '@mui/material'
 import { AvailableCoupon } from '../tickets/Ticket'
 import { useActiveCoupons } from '@/hooks/useCoupons'
 
-export default function AvailableCouponsModal({ isModalOpen, setIsModalOpen, certificate, setIdCoupons, setChoosenCertificates }: any) {
+export default function AvailableCouponsModal({
+  isModalOpen,
+  setIsModalOpen,
+  certificate,
+  setIdCoupons,
+  setChoosenCertificates,
+  coupon,
+}: any) {
   var { tickets, setTickets } = useActiveCoupons(certificate)
 
   const onClick = (idCoupon: number) => {
@@ -20,7 +27,7 @@ export default function AvailableCouponsModal({ isModalOpen, setIsModalOpen, cer
           <h4 className='text-center mb-10'>Recuerda que sólo puedes escoger un cupón por certificado</h4>
           <div className='tickets__redeem no-scrollbar'>
             {tickets.map((ticket, index) => (
-              <AvailableCoupon key={index} {...ticket} onClick={() => onClick(ticket.id)} />
+              <AvailableCoupon key={index} {...ticket} onClick={() => onClick(ticket.id)} coupon={coupon} />
             ))}
           </div>
         </div>

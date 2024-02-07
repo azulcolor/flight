@@ -8,11 +8,11 @@ export default function Button({ children, buttonFunction }: Ibutton) {
   )
 }
 
-export function ButtonCupon({ buttonFunction, hasValor }: ICouponValor) {
+export function ButtonCupon({ buttonFunction, hasValor, redeem }: ICouponValor) {
   const buttonStyle = hasValor ? 'button__cupon--selected' : 'button__cupon'
   return (
     <button className={buttonStyle} onClick={buttonFunction}>
-      {hasValor ? 'Cupón seleccionado' : 'Seleccionar cupón'}
+      {hasValor ? redeem.selectedCoupon : redeem.couponButton}
     </button>
   )
 }

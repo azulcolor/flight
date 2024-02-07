@@ -5,11 +5,12 @@ export const filter = (
   status: string | number,
   tickets: ITicket[],
   setFilterTickets: (value: ITicket[]) => void,
+  all: string,
 ) => {
   setFilterTickets(tickets)
   let filteredTickets = tickets
 
-  if (certificate != 'Todos') {
+  if (certificate != all) {
     filteredTickets = tickets.filter((ticket) => ticket.id_certificado === certificate)
     setFilterTickets(filteredTickets)
   }

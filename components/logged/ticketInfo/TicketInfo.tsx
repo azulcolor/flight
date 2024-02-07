@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { IInfo } from '@/types/logged/ticketInfo'
 import Link from 'next/link'
 
-export default function TicketInfo({ info }: IInfo) {
+export default function TicketInfo({ info, lang, coupon }: IInfo) {
   const hasButton = info.status === 'startProcess' || info.status === 'active' || info.status === 'refused'
 
   return (
@@ -15,8 +15,8 @@ export default function TicketInfo({ info }: IInfo) {
           {info.status === 'active' && info.certificate}.
         </p>
         {hasButton && (
-          <Link href={'/about'} className='link'>
-            Ver contacto
+          <Link href={`/${lang}/about`} className='link'>
+            {coupon.contact}
           </Link>
         )}
       </div>

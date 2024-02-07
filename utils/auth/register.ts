@@ -1,11 +1,12 @@
 import { IRegisterFunction } from '@/types/auth'
 import { flightApi } from '@/api'
 
-const register: IRegisterFunction = async (userData, setError) => {
+const register: IRegisterFunction = async (userData, setError, lang) => {
   try {
-    const token = await flightApi.post('register', userData)
+    // const token = await flightApi.post('register', userData)
+    await flightApi.post('register', userData)
 
-    window.location.href = `/register/${token.data}`
+    window.location.href = `/${lang}/register/success`
   } catch (error: any) {
     const { ok, message } = error.response.data
 

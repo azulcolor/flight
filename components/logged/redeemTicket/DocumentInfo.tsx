@@ -12,11 +12,11 @@ function Header({ status }: { status: string }) {
   )
 }
 
-function Footer({ certificates }: { certificates: number[] }) {
+function Footer({ certificates, redeem }: { certificates: number[]; redeem: any }) {
   return (
     <section className='flex justify-between px-3 items-center gap-4'>
       <div>
-        <h3 className='text-white'>Certificados: </h3>
+        <h3 className='text-white'>{`${redeem.certificates}:`}</h3>
         <div className='flex'>
           {certificates.map((certificate, index) => {
             return (
@@ -32,10 +32,12 @@ function Footer({ certificates }: { certificates: number[] }) {
   )
 }
 
-export default function DocumentInfo() {
+export default function DocumentInfo({ redeem, lang }: { redeem: any; lang: string }) {
   const { documents } = useDocuments()
 
   let status
+
+  console.log(redeem, lang)
 
   return documents.map((document) => {
     return (
@@ -44,7 +46,7 @@ export default function DocumentInfo() {
         <div className={`flex ${status} ticket__container justify-around`} key={document.id}>
           <Header status={document.nombre_documento_status} />
           <Lines />
-          <Footer certificates={document.certificates} />
+          <Footer certificates={document.certificates} redeem={redeem} />
         </div>
       )
     )

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { IInfo } from '@/types/logged/ticketInfo'
 import Link from 'next/link'
 
-export default function TicketInfoMobile({ info }: IInfo) {
+export default function TicketInfoMobile({ info, lang, coupon }: IInfo) {
   const hasButton = info.status === 'startProcess' || info.status === 'active' || info.status === 'refused'
 
   return (
@@ -16,17 +16,17 @@ export default function TicketInfoMobile({ info }: IInfo) {
 
       {hasButton ? (
         <div className='flex flex-col items-center gap-6'>
-          <Link href={'/about'} className='link'>
-            Ver contacto
+          <Link href={`/${lang}/about`} className='link'>
+            {coupon.contact}
           </Link>
 
-          <Link href={'/tickets'} className=' text-primary-100 underline underline-offset-4'>
-            Ver cupones
+          <Link href={`/${lang}/tickets`} className=' text-primary-100 underline underline-offset-4'>
+            {coupon.seeCoupon}
           </Link>
         </div>
       ) : (
-        <Link href={'/tickets'} className='link'>
-          Ver cupones
+        <Link href={`/${lang}/tickets`} className='link'>
+          {coupon.seeCoupon}
         </Link>
       )}
     </div>
