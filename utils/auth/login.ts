@@ -13,6 +13,7 @@ const login: IloginFunction = async (userData, setError, lang) => {
 
     window.location.href = `/${lang}/tickets`
   } catch (error: any) {
+    console.log(error)
     const { ok, message } = error.response.data
 
     setError({ ok, message })

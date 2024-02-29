@@ -3,13 +3,13 @@ import { flightApi } from '@/api'
 
 export const forgotPassword: IforgotPasswordFunction = async (userData, lang) => {
   try {
-    window.location.href = `/${lang}/forgot/reset`
+    const response: IforgotPasswordApiResponse = await flightApi.post('sendEmail', userData)
 
-    const response: IforgotPasswordApiResponse = await flightApi.post('forgot-password', {
-      userData,
-    })
+    console.log(response)
 
     const { succesful, message } = response.data
+
+    window.location.href = `/${lang}`
 
     return {
       succesful,
@@ -20,13 +20,14 @@ export const forgotPassword: IforgotPasswordFunction = async (userData, lang) =>
   }
 }
 
-export const resetPassword: IResetPasswordFunction = async (userData, token, setError) => {
+export const resetPassword: IResetPasswordFunction = async (userData, setError, lang) => {
   try {
-    const url = `resetPassword?token=${token}`
+    const url = 'resetPassword'
     await flightApi.patch(url, userData)
 
-    window.location.href = '/'
+    window.location.href = `/${lang}`
   } catch (error: any) {
+    console.log(error)
     const { ok, message } = error.response.data
 
     setError({ ok, message })

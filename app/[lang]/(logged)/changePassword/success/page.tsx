@@ -5,9 +5,9 @@ import Image from 'next/image'
 import { Button } from '@/components/common'
 import { routes } from '@/utils/constants'
 
-export default function Success() {
+export default function Success({ params: { lang } }: { params: { lang: string } }) {
   const handleButton = () => {
-    window.location.href = routes.tickets
+    window.location.href = routes(lang).tickets
   }
 
   return (

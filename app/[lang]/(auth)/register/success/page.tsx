@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 export default function Success({ params: { lang } }: { params: { lang: string } }) {
   const { success } = getDictionary(lang).register
+  console.log(success)
 
   return (
     <div className='column__center justify-center h-[82vh]'>

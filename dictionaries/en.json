@@ -53,7 +53,13 @@
         "button": "Send",
         "loginQuestion": "Do you remember your password?",
         "login": "Login",
-        "contact": "Contact us"
+        "contact": "Contact us",
+        "second": {
+            "title": "Change password",
+            "newPassword": "New password",
+            "confirmPassword": "Confirm new password",
+            "continue": "Continue"
+        }
     },
     "header" : {
         "coupons": "Coupons",
@@ -117,6 +123,10 @@
                 "title": "Successfully sent!",
                 "message": "Your document has been successfully submitted",
                 "button": "See coupons"
-            }
+            },
+            "coupon": {
+                "title": "Select the coupon you want to use",
+                "message": "Remember that you can only choose one coupon per certificate"
+            }   
         }
     }

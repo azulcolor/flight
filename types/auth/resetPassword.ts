@@ -13,6 +13,7 @@ interface IForgotPasswordResponse {
 interface IResetPasswordRequest {
   password: string
   repeatPassword: string
+  token: string
 }
 
 interface IResetPasswordResponse {
@@ -22,5 +23,5 @@ interface IResetPasswordResponse {
 export type IforgotPasswordFunction = (userData: IForgotPasswordRequest, lang: string) => Promise<IResetPasswordResponse>
 export type IforgotPasswordApiResponse = AxiosResponse<IForgotPasswordResponse>
 
-export type IResetPasswordFunction = (userData: IResetPasswordRequest, token: string, setError: SetError) => Promise<void>
+export type IResetPasswordFunction = (userData: IResetPasswordRequest, setError: SetError, lang: String) => Promise<void>
 export type IResetPasswordApiResponse = AxiosResponse<IResetPasswordResponse>

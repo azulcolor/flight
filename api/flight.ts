@@ -4,10 +4,15 @@ import useSWR from 'swr'
 
 const token = Cookies.get('token')
 
+let lang = Cookies.get('lang') || 'es'
+
+const host = process.env.FLIGHT_API_URL
+
 const flightApi = axios.create({
-  baseURL: 'http://localhost:3000/api/socios/',
+  baseURL: host,
   headers: {
     Authorization: `Bearer ${token}`,
+    Lang: lang,
   },
 })
 
@@ -27,7 +32,7 @@ export const fetcher = async (url: string) => {
 }
 
 export const SwrFetcher = (url: string) => {
-  return useSWR(`http://localhost:3000/api/socios/${url}`, fetcher)
+  return useSWR(`${host}${url}`, fetcher)
 }
 
 export default flightApi

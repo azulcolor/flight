@@ -11,9 +11,9 @@ import { filter } from '@/services/filter'
 import { getDictionary } from '../../dictionaries'
 
 export default function Tickets({ params }: { params: any }) {
-  const { certificates, tickets, status } = useCoupons()
   const { lang } = params
   const coupon = getDictionary(lang).coupon
+  const { certificates, tickets, status } = useCoupons(coupon.all)
   const [info, setInfo] = useState<IInfoStructure>(ticketInfo(lang).default)
   const [certificateFilter, setCertificateFilter] = useState<string>(coupon.all)
   const [statusFilter, setStatusFilter] = useState<string>('0')

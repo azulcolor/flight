@@ -3,7 +3,6 @@ import { flightApi } from '@/api'
 
 const register: IRegisterFunction = async (userData, setError, lang) => {
   try {
-    // const token = await flightApi.post('register', userData)
     await flightApi.post('register', userData)
 
     window.location.href = `/${lang}/register/success`

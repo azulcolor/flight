@@ -2,12 +2,12 @@ import { flightApi } from '@/api'
 import { ITicket } from '@/types/logged'
 import { MutableRefObject, SetStateAction } from 'react'
 
-export const getCertificates = (certificates: { current: string[] }) => {
+export const getCertificates = (certificates: { current: string[] }, all: string) => {
   const certificatesValue = localStorage.getItem('certificates')
   const certificados = JSON.parse(certificatesValue || '[]')
 
   certificates.current = certificados
-  certificates.current.unshift('Todos')
+  certificates.current.unshift(all)
 }
 
 export const getUserCertificates = async (setCertificates: any) => {

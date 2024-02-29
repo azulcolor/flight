@@ -30,7 +30,7 @@ export default function Ticket({
       <div className={`hidden lg:flex ${realStatus} ticket__container`} onClick={() => setInfo(info)}>
         <Head value={value} status={nombreStatus} number={numero_cupon} certificate={id_certificado} coupon={coupon} />
         <Lines />
-        <Foot startDate={fecha_inicio} endDate={fecha_fin} coupon={coupon} />
+        <Foot startDate={fecha_inicio} endDate={fecha_fin} coupon={coupon} lang={lang} />
       </div>
       <Link
         className={`flex lg:hidden ${realStatus} ticket__container`}
@@ -39,7 +39,7 @@ export default function Ticket({
       >
         <Head value={value} status={nombreStatus} number={numero_cupon} certificate={id_certificado} coupon={coupon} />
         <Lines />
-        <Foot startDate={fecha_inicio} endDate={fecha_fin} coupon={coupon} />
+        <Foot startDate={fecha_inicio} endDate={fecha_fin} coupon={coupon} lang={lang} />
       </Link>
     </>
   )
@@ -55,6 +55,7 @@ export function AvailableCoupon({
   numero_cupon,
   onClick,
   coupon,
+  lang,
 }: IAvailableCouponProps) {
   const realStatus = ticketStatus[status - 1]
 
@@ -63,12 +64,12 @@ export function AvailableCoupon({
       <div className={`hidden lg:flex ${realStatus} ticket__container`} onClick={onClick}>
         <Head value={value} status={nombreStatus} number={numero_cupon} certificate={id_certificado} coupon={coupon} />
         <Lines />
-        <Foot startDate={fecha_inicio} endDate={fecha_fin} coupon={coupon} />
+        <Foot startDate={fecha_inicio} endDate={fecha_fin} coupon={coupon} lang={lang} />
       </div>
       <div className={`flex lg:hidden ${realStatus} ticket__container`} onClick={onClick}>
         <Head value={value} status={nombreStatus} number={numero_cupon} certificate={id_certificado} coupon={coupon} />
         <Lines />
-        <Foot startDate={fecha_inicio} endDate={fecha_fin} coupon={coupon} />
+        <Foot startDate={fecha_inicio} endDate={fecha_fin} coupon={coupon} lang={lang} />
       </div>
     </>
   )

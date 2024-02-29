@@ -110,6 +110,8 @@ export default function Form({ params }: { params: any }) {
             idCoupons={idCoupons}
             setChoosenCertificates={setChoosenCertificates}
             coupon={coupon}
+            lang={lang}
+            redeem={redeem}
           />
         </div>
       </div>

@@ -3,13 +3,13 @@ import { fetchCoupons, getCertificates, fetchActiveCoupons } from '@/services'
 import { useEffect, useRef, useState } from 'react'
 import { fetchCouponStatus, getAvailableCertificates } from '@/services/coupons'
 
-export const useCoupons = () => {
+export const useCoupons = (all: string) => {
   const certificates = useRef<string[]>([])
   const [tickets, setTickets] = useState<ITicket[]>([])
   const [status, setStatus] = useState([])
 
   useEffect(() => {
-    getCertificates(certificates)
+    getCertificates(certificates, all)
     fetchCoupons(certificates, setTickets)
     fetchCouponStatus(setStatus)
   }, [])

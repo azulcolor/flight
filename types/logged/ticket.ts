@@ -27,6 +27,7 @@ export interface ITicketFoot {
   startDate: string
   endDate: string
   coupon: any
+  lang: string
 }
 
 export default interface ITicketProps extends ITicket {

@@ -24,11 +24,16 @@
         "username": "Nombre de usuario",
         "password": "Contraseña",
         "button": "Continuar",
-        "membersip": "Número de membresía",
+        "membership": "Número de membresía",
         "membershipAdvice": "El correo y el número de membresía deberán ser los proporcionados en el contrato",
         "loginQuestion": "¿Ya tienes una cuenta?",
         "login": "Iniciar sesión",
-        "contact": "Contáctanos"
+        "contact": "Contáctanos",
+        "success": {
+            "title": "¡Perfecto!",
+            "message": "El correo fue enviado para activar tu cuenta",
+            "back": "Regresar al inicio de sesión"
+        }
     },
     "secondStep": {
         "unsuccess": {
@@ -48,7 +53,13 @@
         "button": "Enviar",
         "loginQuestion": "¿Ya recuerdas tu contraseña?",
         "login": "Iniciar sesión",
-        "contact": "Contáctanos"
+        "contact": "Contáctanos",
+        "second": {
+            "title": "Cambiar contraseña",
+            "newPassword": "Nueva contraseña",
+            "confirmPassword": "Confirmar contraseña",
+            "continue": "Continuar"
+        }
     },
     "header" : {
         "coupons": "Cupones",
@@ -111,7 +122,16 @@
                 "title": "¡Se ha enviado con éxito!",
                 "message": "Tu documento se ha enviado con éxito, pronto será revisada por los administradores.",
                 "button": "Ver cupones"
+            },
+            "coupon": {
+                "title": "Selecciona el cupón que quieres utilizar",
+                "message": "Recuerda que sólo puedes escoger un cuón por certificado"
             }   
-}
+        },
+    "email": {
+        "title": "Correo Electrónico",
+        "message": "Si tienes alguna duda o problema, no dudes en contactarnos",
+        "button": "Enviar correo"
+    }
 
 }
