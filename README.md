@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Flight Absober
 
-First, run the development server:
+## Run Flight Absorber Backend
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+First you have to get the project in the next link **[Click here to get the project](https://github.com/arodriguez-c/FlightApp)**.
+
+Then you have to ask for the .env file and insert it in the project.  
+
+To run the project use the next commands:
+
+```
+npm install
+nodemon app.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run Flight Absober Front
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can get it in the next link **[Click here to get the project](https://github.com/azulcolor/flight)**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+First, get all the libraries:
 
-## Learn More
+```bash
+yarn
+```
 
-To learn more about Next.js, take a look at the following resources:
+Then run the project  with the next commands
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+yarn build
+yarn start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Open [http://localhost:3001](http://localhost:3001) or where your have the project with your browser to see the result.
 
-## Deploy on Vercel
+To **change the backend route** you can change it in the [next.config.js](next.config.js) file
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
